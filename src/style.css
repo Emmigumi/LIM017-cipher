@@ -1,4 +1,50 @@
-#section2 {
+.page1 {
+    display: block;
+  }
+.page2 { 
     display: none;
   }
-  
+
+  .btn{
+    text-decoration: none;
+    padding: 8px;
+    font-weight: 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    color: #f9fafa;
+    background-color: #fa8703;
+    border: 2px solid #f71a12;
+  }
+
+ /*  .page1{
+    position: relative;
+    display: inline-block;
+    text-align: center;
+} */
+/* .page1{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+     
+}
+.centrado{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center; 
+    text-overflow:clip;
+    }
+
+    .page1 {
+      background-image: url("Vol100pFondoTrans.png");
+      background-size: cover;
+  }
+  .cabecera-header {
+    color: #fff;
+    height: 300px;
+    line-height: 300px;
+    text-align: center;
+    vertical-align: middle;
+    text-shadow: #111 0px 0px 10px;
+    text-overflow:clip;
+  } */

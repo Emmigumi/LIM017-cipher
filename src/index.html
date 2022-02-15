@@ -8,29 +8,29 @@
 </head>
 
 <body>
-  <header id="root" class="page1">
+  <header id="ONROUP" class="page1">
     <h1>Bienvenido a ONROUP</h1>
+  <p class="centrado"> Acompañamos tu esfuerzo por ayudar al prójimo, 
+    brindando mayor seguridad y efectividad a tu comunicación.</p>
+  <img src= "Vol100pFondoTrans.png" with= "10px" heigth= "10px" > <br>
+    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre">
+    <button type="button" id="btn1" class=btn>Ingresar</button>
   </header>
-  <section id="section1" class="page1">
-    <image src="https://www.iapo.org.uk/sites/default/files/images/paper%20chain%20team_veer%20720px.jpg" with="100"
-      heigth="50"></image>
-    <h2>¿Quién eres?</h2>
-    <input type="text" id="user" name="user" placeholder="Usuario">
-    <button type="button" id="btn1" class=btn1>Ingresar</button>
-  </section>
 
-  <section id="section2" class="page2">
+  <section id="section1" class="page2">
     <h2 id="greet"></h2>
-    
-    <input type="text" id="message" name="Ingrese el texto" placeholder="Ingrese el texto">
+    <p>Desplazamiento</p>
+    <input type="number" id="offset1" placeholder="##" value="0" min="0">
+    <p>Escribe el texto</p>
+    <input type="text" id="message1" name="Ingrese el texto" placeholder="Ingrese el texto">
     <p>Elige entre estas opciones</p>
-    <button type="button" id=btn2>CIFRAR</button>
-    <button type="button" id="btn3">DESCIFRADO</button>
+    <button type="button" id="btn2" class="btn">Cifrar</button>
+    <button type="button" id="btn3" class="btn">Descifrar</button>
+    <p>Resultados</p>
+   <!--  <output id="text2" value="nmbre de funcion" ></output> -->
+    <button type="button" id= "bnt4" class="btn">Copiar</button>
+    <button type="button" id= "bnt5" class="btn">Reiniciar</button>
   </section>
-
-  <!-- <div id="zona de cifrado" class="page3">
-  <input type="text" id="mensaje1" name="Ingrese el texto" placeholder="Ingrese el texto">
-  </div> -->
 
   <script src="index.js" type="module"></script>
 </body>
