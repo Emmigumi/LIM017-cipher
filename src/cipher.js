@@ -1,26 +1,30 @@
 const cipher = {
   encode: (offset, string) => {
-    for (let i= 0; i<(string.length); i++) {
-      let asciiPosition = string.charCodeAt(i);
-      let enCodexString = (asciiPosition-65 + offset) %26 + 65;
-      let result = String.fromCharCode(enCodexString);
-    };
-    let desplazamiento= document.getElementById("offset1");
-    return result;
-    }, 
-  decode: (offset, string) => {
-    for (let i= 0; i<(string.length); i++) {
-      let asciiPosition = string.charCodeAt(i);
-      let enCodexString = (asciiPosition-65 + offset) %26 + 65;
-      let result = String.fromCharCode(enCodexString);
-      
-    };
-    let desplazamiento = document.getElementById("ofsset1");
+    let result="";
+      for (let i= 0; i<(string.length); i++){
+      let codeAscii = string.charCodeAt(i);
+         if (codeAscii >=65 && codeAscii <=90){
+          result += String.fromCharCode(((codeAscii-65+offset)%26)+65);
+         }
+         else{
+          result += string[i];
+         }
+    }
     return result;
   },
+  decode: (offset, string) => {
+    let result="";
+      for (let i= 0; i<(string.length); i++){
+      let codeAscii = string.charCodeAt(i);
+         if (codeAscii >=65 && codeAscii <=90){
+        result += String.fromCharCode(((codeAscii+65-offset)%26)+65);
+         }
+         else {
+          result+=string[i];
+         }
+    }
+    return result;
+  }
 };
-
-  //decode()
-
 export default cipher;
 

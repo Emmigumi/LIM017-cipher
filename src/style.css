@@ -1,10 +1,33 @@
+body{
+background-color: #2547b8;
+text-align: center;
+}
+img{
+  margin-left: centrado;
+  margin-right: centrado;
+}
 .page1 {
     display: block;
   }
 .page2 { 
     display: none;
   }
-
+h1{
+  color:#fae527;
+  text-align: left;
+  text-indent:460px;
+  font-size: 35px;
+}
+h2{
+  color:#fae527;
+font-size: 35px;
+}
+#name{
+  font-weight: 30px;
+  height: 30px;
+  font-size: 15px;
+  border-radius: 6px;
+}
   .btn{
     text-decoration: none;
     padding: 8px;
@@ -15,7 +38,33 @@
     background-color: #fa8703;
     border: 2px solid #f71a12;
   }
+  #desplazamiento {
+  
+    font-weight:15px;
+    height: 15px;
+    font-size: 15px;
+    border-radius: 6px;
+    width:3%;
+  }
+  #section1 {
+    background-image: url(transparenteFondoVoluntarios50porcent.png);
+    background-repeat: no-repeat;
+    background-size:80%;
+    background-position: center;
+  }
 
+p{
+font-size: 20px;
+font-family: "Helvetica Neue";
+font-weight: bold;
+color: #240218;
+}
+.texto {
+  height: 70px;
+  width:18%;
+  border-radius: 6px;
+  background-color: #fff;
+}
  /*  .page1{
     position: relative;
     display: inline-block;
