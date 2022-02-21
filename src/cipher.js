@@ -3,12 +3,12 @@ const cipher = {
     let result="";
       for (let i= 0; i<(string.length); i++){
       let codeAscii = string.charCodeAt(i);
-         if (codeAscii >=65 && codeAscii <=90){
+        if (codeAscii >=65 && codeAscii <=90){
           result += String.fromCharCode(((codeAscii-65+offset)%26)+65);
-         }
-         else{
+        }
+        else{
           result += string[i];
-         }
+        }
     }
     return result;
   },
@@ -16,12 +16,12 @@ const cipher = {
     let result="";
       for (let i= 0; i<(string.length); i++){
       let codeAscii = string.charCodeAt(i);
-         if (codeAscii >=65 && codeAscii <=90){
+        if (codeAscii >=65 && codeAscii <=90){
         result += String.fromCharCode(((codeAscii+65-offset)%26)+65);
-         }
-         else {
+        }
+        else {
           result+=string[i];
-         }
+        }
     }
     return result;
   }

@@ -7,7 +7,7 @@
 * [3. Información relevante](### 3. Información relevante)
 
 ### 1. Introducción
-Esta aplicación busca ser la mejor herramienta de cifrado de mensajes, disminuyendo el riesgo de filtración de información. 
+Esta aplicación busca ser la mejor herramienta de cifrado de mensajes, disminuyendo el riesgo de filtración de información.
 
 ### 2. Funcionalidad y diseño
 Las principales funciones de la aplicación se desarrollaron en el documento cipher.js, siendo estas: encode() y decode():
@@ -27,10 +27,10 @@ encode: (offset, string) => {
 };
 ```
 Ambas funciones, trabajan con dos parámetros: string y offset, declaramos result como un string vacío y procedemos a abrir un bucle, donde contaremos los elementos de uno en uno, empezando desde la posición cero hasta terminar la cadena apoyados por la propiedad length, que nos indica la cantidad de caracteres de la cadena.
-Procedemos luego a hacer uso del método [charCodeAt()](http://www.w3bai.com/es/jsref/jsref_charcodeat.html) que devuelve un número que indica el valor Unicode, por cada caracter del string(cadena). 
-Esta aplicación trabaja con un subconjunto de Unicode, el código [Ascii](https://elcodigoascii.com.ar/), e incluso un subconjunto del código Ascii, ya que los elementos que admite son los valores que fluctúan entre 65 y 90, representando el abecedario exceptuando la Ñ. 
+Procedemos luego a hacer uso del método [charCodeAt()](http://www.w3bai.com/es/jsref/jsref_charcodeat.html) que devuelve un número que indica el valor Unicode, por cada caracter del string(cadena).
+Esta aplicación trabaja con un subconjunto de Unicode, el código [Ascii](https://elcodigoascii.com.ar/), e incluso un subconjunto del código Ascii, ya que los elementos que admite son los valores que fluctúan entre 65 y 90, representando el abecedario exceptuando la Ñ.
 
-Procedemos a usar el método [String.fromCharCodeAt()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) que convierte en cadenas los valores de cada caracter obtenido, después de haberle aplicado la fórmula de cifrado. 
+Procedemos a usar el método [String.fromCharCodeAt()](https://developer.mozilla.org/es/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode) que convierte en cadenas los valores de cada caracter obtenido, después de haberle aplicado la fórmula de cifrado.
 
 Hacemos uso del DOM en nuestro archivo index.js del cual "llamamos" a encode() y decode() para darle funcionalidad a cada uno de nuestros elementos pertenecientes a nuestra estructura htlm: Botones, cajas de texto y cajas de valores.
 
@@ -38,14 +38,14 @@ Por último trabajamos dandole estilo a nuestro aplicativo en nuestro archivo sa
 
 Elegimos un color azul de fondo ya que según la [psicología del color](https://www.damos.co/blog/marketing-y-branding/psicologia-del-color-como-usar-la-teoria-del-color-en-marketing-y-diseno) , representa fuerza, serenidad y confianza, características que queremos transmitir y que también definen, a nuestros usuarios.
 
-Se ideó un diseño amigable y rápido, comprendiendo la premura de nuestros usuarios al momento de escribir los mensajes que deseen cifrar o descifrar. 
+Se ideó un diseño amigable y rápido, comprendiendo la premura de nuestros usuarios al momento de escribir los mensajes que deseen cifrar o descifrar.
 Es por ello que la aplicación presenta una caja de valores, donde el usuario elegirá el grado de seguridad para su mensaje, el límite mínimo es cero y no existe un límite máximo:
 
 ![input number](offset.png)
 Codificación correspondiente:
 ```html
  <p>Nivel de seguridad</p>
-    <input type="number" id="desplazamiento" value="0" min="0" width="5"> 
+    <input type="number" id="desplazamiento" value="0" min="0" width="5">
 ```
 Seguidamente, presenta una caja de texto, donde el usuario ingresará el mensaje en cuestion:
 
@@ -72,7 +72,7 @@ En el Perú el [Primer Informe del estado del voluntariado corporativo en el Per
 
 > El rango de edad que más participa en los programas de voluntariado corporativo fluctúa entre los 24 y 30 años. Asimismo, la participación del rango de edad entre 18 y 23 años (practicantes) también resulta significativa. A medida que incrementa la edad, se reduce la participación. 
 
-Añadimos también que según el informe ya mencionado y también en [El informe sobre el estado del voluntariado en el mundo,](https://www.unv.org/sites/default/files/21337%20-%20SWVR%20report%20-%20SPANISH%20-%20web%20single%20pages_1.pdf) el género con mayor participación es la femenina. 
+Añadimos también que según el informe ya mencionado y también en [El informe sobre el estado del voluntariado en el mundo,](https://www.unv.org/sites/default/files/21337%20-%20SWVR%20report%20-%20SPANISH%20-%20web%20single%20pages_1.pdf) el género con mayor participación es la femenina.
 Teniendo ambos aspectos en consideración optamos por una imagen central basada en un adulto joven, con el rostro cubierto, permitiendo al usuario definir su género.
 
 ###### Objetivos del usuario respecto a la aplicación

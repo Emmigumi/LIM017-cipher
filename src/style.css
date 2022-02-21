@@ -9,7 +9,7 @@ img{
 .page1 {
     display: block;
   }
-.page2 { 
+.page2 {
     display: none;
   }
 h1{
@@ -39,7 +39,6 @@ font-size: 35px;
     border: 2px solid #f71a12;
   }
   #desplazamiento {
-  
     font-weight:15px;
     height: 15px;
     font-size: 15px;
@@ -52,7 +51,6 @@ font-size: 35px;
     background-size:80%;
     background-position: center;
   }
-
 p{
 font-size: 20px;
 font-family: "Helvetica Neue";
@@ -65,35 +63,3 @@ color: #240218;
   border-radius: 6px;
   background-color: #fff;
 }
- /*  .page1{
-    position: relative;
-    display: inline-block;
-    text-align: center;
-} */
-/* .page1{
-    position: absolute;
-    top: 10px;
-    left: 10px;
-     
-}
-.centrado{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    text-align: center; 
-    text-overflow:clip;
-    }
-
-    .page1 {
-      background-image: url("Vol100pFondoTrans.png");
-      background-size: cover;
-  }
-  .cabecera-header {
-    color: #fff;
-    height: 300px;
-    line-height: 300px;
-    text-align: center;
-    vertical-align: middle;
-    text-shadow: #111 0px 0px 10px;
-    text-overflow:clip;
-  } */
