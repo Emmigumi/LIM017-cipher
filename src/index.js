@@ -6,15 +6,13 @@ btn1.addEventListener('click', () => {
     document.getElementById("ONROUP").style.display="none";
     document.getElementById("section1").style.display="block";
 
-    var nombre = document.getElementById("name").value
-    document.getElementById("greet").innerHTML = "Hola " + nombre;
+    var textName = document.getElementById("name").value
+    document.getElementById("greet").innerHTML = "Hola " + textName;
   });
 
   document.getElementById('btn2').addEventListener("click",function() {
     let string= document.getElementById("message1").value;
-    /* console.log(string); */
     let offset= parseInt(document.getElementById("desplazamiento").value);
-    /* console.log(offset); */
     document.getElementById('message2').value= cipher.encode(offset, string);
   });
 
@@ -28,23 +26,23 @@ btn1.addEventListener('click', () => {
     document.getElementById("message2").value= cipher.decode(offset, string);
     });
 
-    function seleccionarTexto() {
-      let Texto = document.getElementById("message2");
-      let desde = Texto.selectionStart;
-      let hasta = Texto.selectionEnd;
-      let sel = Texto.value.substring(desde, hasta);
+    function selectText() {
+      let Text = document.getElementById("message2");
+      let from = Text.selectionStart;
+      let until = Text.selectionEnd;
+      let sel = Text.value.substring(from, until);
 
-      if (sel.length > 0) {// si hay algo seleccionado
+      if (sel.length > 0) {
         return sel;
-      } else { // de lo contrario selecciona todo el texto
-        return Texto.select();
+      } else {
+        return Text.select();
       }
     }
 
     document.getElementById("btn4").addEventListener("click", () => {
-      seleccionarTexto();
+      selectText();
       try {
-        let exito = document.execCommand("copy"); // devuelve true o false
+        let exito = document.execCommand("copy");
         let msg = exito ? "\xe9xito" : "error";
         return "Hay "+ msg;
       } catch (error) {
@@ -53,10 +51,10 @@ btn1.addEventListener('click', () => {
       }
     });
 
-function Actualizar() {
-  let reiniciar = document.location.reload();
-  return reiniciar;
+function toUpdate() {
+  let restart = document.location.reload();
+  return restart;
 }
 document.getElementById("btn5").addEventListener("click", function(){
-Actualizar();
+toUpdate();
 });

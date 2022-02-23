@@ -1,16 +1,17 @@
 # Cifrado Caesar
 ## Índice
-* [1. Introducción](### 1. Introducción)
+* [1.Introducción](#1-Introducción)
 
-* [2. Resumen](### 2. Resumen)
+* [2.Resumen](#2-Resumen)
 
-* [3. Información relevante](### 3. Información relevante)
+* [3.Información relevante](#3-Información-relevante)
 
 ### 1. Introducción
 Esta aplicación busca ser la mejor herramienta de cifrado de mensajes, disminuyendo el riesgo de filtración de información.
 
 ### 2. Funcionalidad y diseño
-Las principales funciones de la aplicación se desarrollaron en el documento cipher.js, siendo estas: encode() y decode():
+Las principales funciones de la aplicación se desarrollaron en el documento cipher.js, siendo estas encode() y decode(), presentamos a continuación como ejemplo el primero de estos:
+
 ```js
 encode: (offset, string) => {
     let result="";
@@ -36,33 +37,38 @@ Hacemos uso del DOM en nuestro archivo index.js del cual "llamamos" a encode() y
 
 Por último trabajamos dandole estilo a nuestro aplicativo en nuestro archivo satyle.css
 
+Podemos observar el flujo del desarrollo mediante este esquema:
+![Esquema](DESARROLLO.png)
+
 Elegimos un color azul de fondo ya que según la [psicología del color](https://www.damos.co/blog/marketing-y-branding/psicologia-del-color-como-usar-la-teoria-del-color-en-marketing-y-diseno) , representa fuerza, serenidad y confianza, características que queremos transmitir y que también definen, a nuestros usuarios.
 
 Se ideó un diseño amigable y rápido, comprendiendo la premura de nuestros usuarios al momento de escribir los mensajes que deseen cifrar o descifrar.
 Es por ello que la aplicación presenta una caja de valores, donde el usuario elegirá el grado de seguridad para su mensaje, el límite mínimo es cero y no existe un límite máximo:
 
-![input number](offset.png)
-Codificación correspondiente:
 ```html
  <p>Nivel de seguridad</p>
     <input type="number" id="desplazamiento" value="0" min="0" width="5">
 ```
 Seguidamente, presenta una caja de texto, donde el usuario ingresará el mensaje en cuestion:
 
-![Ingresar el texto](inputText.png)
-Codificación correspondiente:
+
 ```html
  <p>Elige entre estas opciones</p><input type="text" id="message1" name="Ingrese el texto" placeholder="Ingrese el texto">
 ```
 También presenta dos botones, el usuario elegirá el que necesite:
-![Buttons](imagenButtons.png)
+
 Codificación correspondiente:
 ```html
 <p>Elige entre estas opciones</p><input type="text" id="message1" name="Ingrese el texto" placeholder="Ingrese el texto">
     <button type="button" id=btn2>CIFRAR</button>
     <button type="button" id="btn3">DESCIFRAR</button>
 ```
-Por último se adición un botón más que permite copiar el mensaje ya procesado, para darle mayor rapidez de envío a nuestros usuarios.
+Se adicionó el botón "copiar" permitiendo obtener el mensaje ya procesado, brindando una mayor rapidez de envío a nuestros usuarios.
+
+Por último se muestra el botón de Reinicio, permitiendo al usuario cifrar o descifrar otro mensaje.
+
+Se añade una vista previa de la sección funcional del aplicativo.
+![Estructura de la sección funcional del aplicativo](DISEÑOOO.png)
 
 ### 3. Información relevante
 
@@ -73,11 +79,11 @@ En el Perú el [Primer Informe del estado del voluntariado corporativo en el Per
 > El rango de edad que más participa en los programas de voluntariado corporativo fluctúa entre los 24 y 30 años. Asimismo, la participación del rango de edad entre 18 y 23 años (practicantes) también resulta significativa. A medida que incrementa la edad, se reduce la participación. 
 
 Añadimos también que según el informe ya mencionado y también en [El informe sobre el estado del voluntariado en el mundo,](https://www.unv.org/sites/default/files/21337%20-%20SWVR%20report%20-%20SPANISH%20-%20web%20single%20pages_1.pdf) el género con mayor participación es la femenina.
-Teniendo ambos aspectos en consideración optamos por una imagen central basada en un adulto joven, con el rostro cubierto, permitiendo al usuario definir su género.
+Teniendo ambos aspectos en consideración optamos por una imagen central basada en un adulto joven, con el rostro cubierto, permitiendo al usuario identificarse independientemente de su género.
 
 ###### Objetivos del usuario respecto a la aplicación
-- Seguridad
-- Confiabilidad
+- Seguro
+- Confiable
 - Dinámico
 - Rápido
 - Amigable
