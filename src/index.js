@@ -28,33 +28,17 @@ btn1.addEventListener('click', () => {
 
     function selectText() {
       let Text = document.getElementById("message2");
-      let from = Text.selectionStart;
-      let until = Text.selectionEnd;
-      let sel = Text.value.substring(from, until);
-
-      if (sel.length > 0) {
-        return sel;
-      } else {
-        return Text.select();
-      }
+      return Text.select();
     }
 
     document.getElementById("btn4").addEventListener("click", () => {
       selectText();
-      try {
-        let exito = document.execCommand("copy");
-        let msg = exito ? "\xe9xito" : "error";
-        return "Hay "+ msg;
-      } catch (error) {
-        let err = error;
-        return err + " No fue posible copiar el texto seleccionado";
-      }
     });
 
-function toUpdate() {
+  function toUpDate() {
   let restart = document.location.reload();
   return restart;
 }
-document.getElementById("btn5").addEventListener("click", function(){
-toUpdate();
+document.getElementById("btn6").addEventListener("click", function(){
+toUpDate();
 });
