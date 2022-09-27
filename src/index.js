@@ -31,7 +31,7 @@ btn1.addEventListener('click', () => {
 
     document.getElementById("copiar").addEventListener("click", () => {
       selectText();
-      document.getElementById('resultado').select();
+      document.getElementById('resultado').value;
     });
 
   function toUpDate() {
