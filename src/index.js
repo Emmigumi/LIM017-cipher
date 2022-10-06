@@ -2,6 +2,7 @@ import cipher from './cipher.js';
 
 const btn1 = document.getElementById('btn1');
 btn1.addEventListener('click', () => {
+    alert("Gracias por su amor y compromiso con el prójimo");
     document.getElementById("ONROUP").style.display="none";
     document.getElementById("section1").style.display="block";
 
@@ -9,39 +10,35 @@ btn1.addEventListener('click', () => {
     document.getElementById("greet").innerHTML = "Hola " + textName;
   });
 
-  document.getElementById('cifrar').addEventListener("click",function() {
-    let string= document.getElementById("add-text").value;
+  document.getElementById('btn2').addEventListener("click",function() {
+    let string= document.getElementById("message1").value;
     let offset= parseInt(document.getElementById("desplazamiento").value);
-    document.getElementById('resultado').value= cipher.encode(offset, string);
+    document.getElementById('message2').value= cipher.encode(offset, string);
   });
 
-  document.getElementById("add-text").addEventListener("keyup",function(){
+  document.getElementById("message1").addEventListener("keyup",function(){
     this.value = this.value.toUpperCase();
   },true);
 
-  document.getElementById("descifrar").addEventListener("click",function() {
-    let string = document.getElementById("add-text").value;
+  document.getElementById("btn3").addEventListener("click",function() {
+    let string = document.getElementById("message1").value;
     let offset= parseInt(document.getElementById("desplazamiento").value);
-    document.getElementById("resultado").value= cipher.decode(offset, string);
+    document.getElementById("message2").value= cipher.decode(offset, string);
     });
 
     function selectText() {
-      document.getElementById('add-text').value = document.getElementById('resultado').value;
+      let Text = document.getElementById("message2");
+      return Text.select();
     }
 
-    document.getElementById("copiar").addEventListener("click", () => {
+    document.getElementById("btn4").addEventListener("click", () => {
       selectText();
-      document.getElementById('resultado').value;
     });
 
   function toUpDate() {
-  let restart = document.querySelectorAll('.texts');
-  for(let i =0; i< restart.length; i++){
-    restart[i].value="";
-  }
+  let restart = document.location.reload();
   return restart;
 }
-
-document.getElementById("limpiar").addEventListener("click", function(){
+document.getElementById("btn6").addEventListener("click", function(){
 toUpDate();
 });
